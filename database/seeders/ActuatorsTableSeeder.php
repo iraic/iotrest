@@ -18,8 +18,9 @@ class ActuatorsTableSeeder extends Seeder
         for ($i = 0; $i < 10; $i++) {
             Actuator::create([
                 'name' => $faker->unique()->word(),
-                'type' => $faker->randomElement(['led', 'servo', 'relay']),
+                'type' => $faker->randomElement(['led', 'motor', 'relay']),
                 'value' => $faker->randomElement([0, 1]),
+                'user_id' => rand(1, 10)
             ]);
         }
     }

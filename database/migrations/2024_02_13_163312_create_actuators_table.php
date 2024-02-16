@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string("name")->unique();
             $table->string("type");
             $table->integer("value");
+            $table->integer("user_id")->unsigned();
             $table->timestamps();
         });
     }

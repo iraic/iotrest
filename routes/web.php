@@ -16,3 +16,7 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->options('{all:.*}', function () use ($router) {
+    return response()->json();
+});
