@@ -20,3 +20,11 @@ $router->get('/', function () use ($router) {
 $router->options('{all:.*}', function () use ($router) {
     return response()->json();
 });
+
+$router->post('login', 'AuthController@login');
+
+$router->get('users', ['middleware'=>'auth', 'uses' => 'UsersController@index']);
+$router->get('users/{id}', 'UsersController@show');
+$router->post('users', 'UsersController@store');
+$router->put('users/{id}', 'UsersController@update');
+$router->delete('users/{id}', 'UsersController@delete');
