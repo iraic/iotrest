@@ -29,7 +29,7 @@ function recurso($router, $url, $modelo){
     $router->get("$url/{id}",$modelo."Controller@show");
     $router->post("$url",$modelo."Controller@store");
     $router->put("$url/{id}",$modelo."Controller@update");
-    $router->patch("$url/{id}",$modelo."Controller@updatePartial");
+    //$router->patch("$url/{id}",$modelo."Controller@updatePartial");
     $router->delete("$url/{id}",$modelo."Controller@destroy");
 }
 

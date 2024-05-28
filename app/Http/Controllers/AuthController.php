@@ -22,7 +22,8 @@ class AuthController extends Controller
             'exp' => time() + 60 * 60,
         ];
         $jwt = JWT::encode($payload, env('JWT_SECRET'), 'HS256');
-        return response()->json(['token' => $jwt]);
+        //return response()->json(['token' => $jwt]);
+        return $jwt;
     }
 
     public function register(Request $request)
