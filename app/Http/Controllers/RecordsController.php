@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Record;
 
-class RecordsControllerer extends Controller
+class RecordsController extends Controller
 {
     function index(Request $request){
         $rows = 10;
