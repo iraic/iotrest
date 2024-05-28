@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Actuator extends Model
+class Record extends Model
 {
     protected $fillable = [
-        'id', 'name', 'type', 'value', 'date', 'user_id'
+        'id', 'sensor_id', 'value', 'date'
     ];
 }

@@ -13,8 +13,9 @@ class UsersController extends Controller
     //Consultar todos los usuarios, por paginación
     public function index(Request $request)
     {
-        $users = User::paginate(10);
-        return response()->json($users, 200);
+        $rows = 10;
+        if ($request->has('rows')) $rows = $request->rows;
+        return User::paginate($rows);
     }
 
     //Consultar un usuario por su id
